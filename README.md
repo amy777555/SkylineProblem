@@ -93,13 +93,13 @@ MERGE(leftSkyline, rightSkyline)
 ```text
 SkylineProject/
 
-├── README.md                         # Project documentation
-├── main.py              
-├── Skyline.py
-├── Merge.py
-├── FileParser.py
+├── README.md                          # Project documentation
+├── main.py                            # Coordinates program execution
+├── Skyline.py                         # Recursive divide-and-conquer algorithm
+├── Merge.py                           # Combines two skylines into one
+├── FileParser.py                      # Handles input parsing and output generation
 │
-└── test_cases/                       # Additional test inputs and outputs
+└── test_cases/                        # Additional test inputs and outputs
     ├── test1_input.txt
     ├── test1_output.txt
     ├── test2_input.txt
