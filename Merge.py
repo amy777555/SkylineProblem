@@ -133,6 +133,7 @@ def merge_skylines(left_skyline, right_skyline):
             j += 1 # Increment right
 
         # Both skylines change at the same x-coordinate
+        else:
 
             x = left_strip[1]
 
