@@ -1,6 +1,7 @@
 """
-This file contains the recursive divide-and-conquer part of the
-skyline algorithm. The merge step is handled in Merge.py.
+Implements the recursive divide-and-conquer portion of the skyline algorithm.
+
+The merge step is implemented in Merge.py.
 """
 from Merge import merge_skylines
 
@@ -43,8 +44,8 @@ def skyline(buildings):
     if not buildings:
         return []
 
-    # One building creates a rise at its left edge
-    # and a drop back to 0 at its right edge.
+    # A single building produces two skyline points:
+    # one at its left edge and one at its right edge.
     if len(buildings) == 1:
         height, left_x, right_x = buildings[0]
 
