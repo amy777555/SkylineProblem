@@ -102,25 +102,30 @@ MERGE_SKYLINES(left_skyline, right_skyline)
             x = left strip's x-coordinate
             update left_height
             current_height = max(left_height, right_height)
-            append strip if height changed
+            APPEND_STRIP(merged_skyline, current_height, x)
             increment i
 
         else if right strip occurs first
             x = right strip's x-coordinate
             update right_height
             current_height = max(left_height, right_height)
-            append strip if height changed
+            APPEND_STRIP(merged_skyline, current_height, x)
             increment j
 
         else
             x = the shared x-coordinate
             update both heights
             current_height = max(left_height, right_height)
-            append strip if height changed
+            APPEND_STRIP(merged_skyline, current_height, x)
             increment i and j
 
-    append any remaining strips from left_skyline
-    append any remaining strips from right_skyline
+    while strips remain in left_skyline
+        APPEND_STRIP(merged_skyline, left strip)
+        increment i
+
+    while strips remain in right_skyline
+        APPEND_STRIP(merged_skyline, right strip)
+        increment j
 
     return merged_skyline
 ```
@@ -163,6 +168,7 @@ Height, LeftX, RightX
 Height, LeftX, RightX
 ...
 ```
+Each line represents one building, where `Height` is the building height, `LeftX` is the x-coordinate where the building begins, and `RightX` is the x-coordinate where the building ends.
 
 ---
 
@@ -177,6 +183,7 @@ Height, X
 Height, X
 ...
 ```
+Each line represents a point where the skyline changes height. `Height` is the new skyline height, and `X` is the x-coordinate where the height change occurs.
 
 ---
 
