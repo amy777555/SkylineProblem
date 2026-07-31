@@ -21,23 +21,23 @@
 The Skyline Problem asks us to find the outline of the city's skyline which is formed by a collection of rectangular buildings when viewed from a distance. 
 
 
-
-
 ---
 
 ## Problem Statement
-
-Describe the Skyline Problem in detail.
+-Describe the Skyline Problem in detail.
 
 What is given? what is the desired output? why is this problem challenging?
+
+
 
 ---
 
 ## Solution Approach
 
-Explain the algorithm in words and from a high-level view
+-Explain the algorithm in words and from a high-level view
+-Talk about the divide-and-conquer strategy, recursive subdivision, and the merge process
 
-Talk about the divide-and-conquer strategy, recursive subdivision, and the merge process
+In order to 
 
 ---
 
