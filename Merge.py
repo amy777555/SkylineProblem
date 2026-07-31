@@ -11,27 +11,69 @@ right_skyline = skyline(buildings[mid:])
 return merge_skylines(left_skyline, right_skyline)
 
 Pseudo Code:
-MERGE(left_skyline, right_skyline)
+
+APPEND_STRIP(result, height, x)
+
+    if result is empty
+        append (height, x)
+        return
+
+    previous_height, previous_x = last strip in result
+
+    if previous_height equals height
+        return
+
+    if previous_x equals x
+        replace the last strip with (height, x)
+    else
+        append (height, x)
+
+
+MERGE_SKYLINES(left_skyline, right_skyline)
+
+    merged_skyline = empty list
+
+    i = 0
+    j = 0
 
     left_height = 0
     right_height = 0
 
     while both skylines still contain strips
-        compare current x-coordinate
+
+        left_strip = left_skyline[i]
+        right_strip = right_skyline[j]
 
         if left strip occurs first
+            x = left strip's x-coordinate
             update left_height
+            current_height = max(left_height, right_height)
+            APPEND_STRIP(merged_skyline, current_height, x)
+            increment i
+
         else if right strip occurs first
+            x = right strip's x-coordinate
             update right_height
+            current_height = max(left_height, right_height)
+            APPEND_STRIP(merged_skyline, current_height, x)
+            increment j
+
         else
+            x = the shared x-coordinate
             update both heights
+            current_height = max(left_height, right_height)
+            APPEND_STRIP(merged_skyline, current_height, x)
+            increment i and j
 
-        current_height = max(left_height, right_height)
-        append strip if height changed
+    while strips remain in left_skyline
+        APPEND_STRIP(merged_skyline, left strip)
+        increment i
 
-    append remaining strips
-    remove redundant strips
-    return merged skyline
+    while strips remain in right_skyline
+        APPEND_STRIP(merged_skyline, right strip)
+        increment j
+
+    return merged_skyline
 """
 
 
