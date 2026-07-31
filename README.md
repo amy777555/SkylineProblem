@@ -66,27 +66,63 @@ SKYLINE(buildings)
 ### Merge Algorithm
 
 ```text
-MERGE(left_skyline, right_skyline)
+APPEND_STRIP(result, height, x)
+
+    if result is empty
+        append (height, x)
+        return
+
+    previous_height, previous_x = last strip in result
+
+    if previous_height equals height
+        return
+
+    if previous_x equals x
+        replace the last strip with (height, x)
+    else
+        append (height, x)
+
+
+MERGE_SKYLINES(left_skyline, right_skyline)
+
+    merged_skyline = empty list
+
+    i = 0
+    j = 0
 
     left_height = 0
     right_height = 0
 
     while both skylines still contain strips
-        compare current x-coordinate
+
+        left_strip = left_skyline[i]
+        right_strip = right_skyline[j]
 
         if left strip occurs first
+            x = left strip's x-coordinate
             update left_height
+            current_height = max(left_height, right_height)
+            append strip if height changed
+            increment i
+
         else if right strip occurs first
+            x = right strip's x-coordinate
             update right_height
+            current_height = max(left_height, right_height)
+            append strip if height changed
+            increment j
+
         else
+            x = the shared x-coordinate
             update both heights
+            current_height = max(left_height, right_height)
+            append strip if height changed
+            increment i and j
 
-        current_height = max(left_height, right_height)
-        append strip if height changed
+    append any remaining strips from left_skyline
+    append any remaining strips from right_skyline
 
-    append remaining strips
-    remove redundant strips
-    return merged skyline
+    return merged_skyline
 ```
 ---
 
