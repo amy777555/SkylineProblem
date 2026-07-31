@@ -120,7 +120,7 @@ SkylineProject/
 
 ## Input Format
 
-Describe the expected input format.
+The input file will contain the height of the building first, followed by the x-coordinates of the building's left edge and then its right edge.
 
 Example:
 
