@@ -134,7 +134,7 @@ Height, LeftX, RightX
 
 ## Output Format
 
-The output file will list tuples containing the calculated height and x-coordinate of each building's skyline a shown:
+The output file will list tuples containing the calculated height and x-coordinate which correspond to each building's skyline as shown:
 
 Example:
 
