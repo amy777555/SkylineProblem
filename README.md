@@ -34,7 +34,7 @@ The Skyline Problem asks us to find the outline of the city's skyline which is f
 -Explain the algorithm in words and from a high-level view
 -Talk about the divide-and-conquer strategy, recursive subdivision, and the merge process
 
-In order to 
+The program will first read the input file and organize the provided information into a list named "buildings" with each building in the list being stored as (height, left_x, right_x). Once the list has every building stored inside it, a middle point will be calculated in order to divide the list in 2 as part of our divide-and-conquer strategy. After splitting the list into two separate lists the skyline method is called on both halves in order to return the skyline points of every building in the two lists and storing them in the corresponding variables left_buildings and right_buildings. Once the skylines are calculated, they will be merged back together by the merge_skylines function and returned    (Not finished)
 
 ---
 
