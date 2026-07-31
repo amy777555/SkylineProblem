@@ -15,37 +15,32 @@
 ---
 
 ## Overview
--Describe the Skyline Problem and the purpose of the project in general terms
 
-This project is a Python implementation intended to calculate the outermost shape of a city's skyline formed by an assortment of rectangular buildings with a timespace complexity of O(nlogn). Given a list of varying heights as well as left and right x-coordinates in the form of non-negative integers, the program will then calculate the rectangular strips which form the skyline and return them within the output file in the form of the tuple pair (h, l) where h is the height of the strip and l is the x-coordinate of the strip's left side.
-
+This project is a Python implementation that calculates the outermost shape of a city's skyline formed by a collection of rectangular buildings. Given a list of building heights along with their left and right x-coordinates, the program computes the rectangular strips that define the skyline and writes them to an output file as `(height, x-coordinate)` pairs. The divide-and-conquer algorithm runs in **O(n log n)** time.
 
 ---
 
 ## Problem Statement
--Describe the Skyline Problem in detail.
--What is given? what is the desired output? why is this problem challenging?
 
-The outline of a city's skyline is formed by a collection of rectangular buildings when viewed from a distance. Each of these rectangular buildings possess a rectangular strip which form the outermost shape of the skyline buildings. The goal of this program is to design an algorithm that will calculate the rectangular strip for an inputted list of heights and x-coordinates pertaining to a set of buildings such that the skyline may be graphed.
+The outline of a city's skyline is formed by a collection of rectangular buildings when viewed from a distance. The visible portions of these buildings define the outermost shape of the skyline. Given a list of building heights and their corresponding left and right x-coordinates, the goal of this project is to design an algorithm that calculates the skyline by identifying the rectangular strips that make up its outer boundary. The resulting skyline is written to an output file as a sequence of skyline points.
 
 ---
 
 ## Solution Approach
--Explain the algorithm in words and from a high-level view
--Talk about the divide-and-conquer strategy, recursive subdivision, and the merge process
 
-The program will first read the input file and organize the provided information into a list named "buildings" with each building in the list being stored as (height, left_x, right_x). Once the list has every building stored inside it, a middle point will be calculated in order to divide the list in 2 as part of our divide-and-conquer strategy. After splitting the list into two separate lists the skyline method is called on both halves in order to return the skyline points of every building in the two lists and storing them in the corresponding variables left_buildings and right_buildings. Once the skylines are calculated, they will be merged back together by the merge_skylines function and returned ___   
-
-(Not finished)
+The program first reads the input file and stores each building as a tuple in the form `(height, left_x, right_x)` within a list named `buildings`. Once all of the buildings have been loaded, the list is divided into two halves as part of the divide-and-conquer strategy. The `skyline()` function is then called recursively on each half to compute the skyline points, which are stored in `left_skyline` and `right_skyline`. Finally, the `merge_skylines()` function combines the two partial skylines into a single skyline, which is returned as the final result.
 
 ---
 
 ## Algorithm Description
--Describe the algorithm step-by-step.
 
-The algorithm we have implemented works by 
+The algorithm begins by reading the input file and storing each building as a tuple in the form `(height, left_x, right_x)`. If the input contains no buildings, an empty skyline is returned. If only one building is present, the algorithm returns two skyline points: one marking where the building begins and another where it returns to ground level.
 
-(Definitely Not finished)
+For larger inputs, the list of buildings is divided into two halves. The `skyline()` function is then called recursively on each half until every recursive call reaches the base case of a single building.
+
+After the recursive calls return, the `merge_skylines()` function combines the two partial skylines into one complete skyline. During the merge process, the algorithm compares the current skyline points from both halves, tracks the current height of each skyline, and records the maximum visible height at each x-coordinate. The `append_strip()` helper function removes redundant skyline points by ignoring duplicate height changes and replacing points that share the same x-coordinate.
+
+Once all skyline points have been processed and merged, the completed skyline is returned and written to the output file.
 
 ---
 
@@ -146,8 +141,6 @@ Height, X
 Height, X
 ...
 ```
-
-Explain what each tuple represents.
 
 ---
 
