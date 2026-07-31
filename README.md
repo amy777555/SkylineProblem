@@ -17,7 +17,7 @@
 ## Overview
 -Describe the Skyline Problem and the purpose of the project in general terms
 
-This project is a Python implementation of the  
+This project is a Python implementation intended to calculate the outermost shape of a city's skyline formed by an assortment of rectangular buildings. Given a list of varying heights as well as left and right x-coordinates in the form of non-negative integers, the program will then calculate the rectangular strips which form the skyline in the form of the tuple pair (h, l) where h is the height of the strip and l is the x-coordinate of the strip's left side.
 
 
 ---
@@ -134,7 +134,7 @@ Height, LeftX, RightX
 
 ## Output Format
 
-The output file will list tuples containing the calculated height and x-coordinate which correspond to each building's skyline as shown:
+The output file will list tuples containing the height and x-coordinate of each building's calculated rectangular strip which forms the skyline as shown:
 
 Example:
 
