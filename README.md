@@ -120,7 +120,7 @@ SkylineProject/
 
 ## Input Format
 
-The input file will contain the heights of each building first, followed by the x-coordinates of their left edge (LeftX) and right edges (RightX) as shown below.
+The input file will contain the heights of each building first, followed by the x-coordinates of their left edge (LeftX) and right edges (RightX) as shown below:
 
 Example:
 
@@ -134,7 +134,7 @@ Height, LeftX, RightX
 
 ## Output Format
 
-The output file will list tuples containing the calculated height and x-coordinate based on the inputted data of each building from the input file. 
+The output file will list tuples containing the calculated height and x-coordinate of each building's skyline a shown:
 
 Example:
 
