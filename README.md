@@ -15,25 +15,22 @@
 ---
 
 ## Overview
-
 -Describe the Skyline Problem and the purpose of the project in general terms
 
-The Skyline Problem asks us to find the outline of the city's skyline which is formed by a collection of rectangular buildings when viewed from a distance. 
+This project is a Python implementation of the  
 
 
 ---
 
 ## Problem Statement
 -Describe the Skyline Problem in detail.
+-What is given? what is the desired output? why is this problem challenging?
 
-What is given? what is the desired output? why is this problem challenging?
-
-
+The Skyline Problem asks us to find the outline of the city's skyline which is formed by a collection of rectangular buildings when viewed from a distance.
 
 ---
 
 ## Solution Approach
-
 -Explain the algorithm in words and from a high-level view
 -Talk about the divide-and-conquer strategy, recursive subdivision, and the merge process
 
@@ -42,8 +39,9 @@ In order to
 ---
 
 ## Algorithm Description
+-Describe the algorithm step-by-step.
 
-Describe the algorithm step-by-step.
+The algorithm we have implemented works by 
 
 ---
 
