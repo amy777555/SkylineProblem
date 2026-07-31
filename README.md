@@ -16,7 +16,12 @@
 
 ## Overview
 
-Describe the Skyline Problem and the purpose of the project in general terms
+-Describe the Skyline Problem and the purpose of the project in general terms
+
+The Skyline Problem asks us to find the outline of the city's skyline which is formed by a collection of rectangular buildings when viewed from a distance. 
+
+
+
 
 ---
 
