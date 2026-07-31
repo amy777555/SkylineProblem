@@ -26,7 +26,7 @@ This project is a Python implementation intended to calculate the outermost shap
 -Describe the Skyline Problem in detail.
 -What is given? what is the desired output? why is this problem challenging?
 
-The Skyline Problem asks us to find the outline of the city's skyline which is formed by a collection of rectangular buildings when viewed from a distance.
+The outline of a city's skyline is formed by a collection of rectangular buildings when viewed from a distance. Each of these rectangular buildings possess a rectangular strip which form the outermost shape of the skyline buildings. The goal of this program is to design an algorithm that will calculate the rectangular strip for an inputted list of heights and x-coordinates pertaining to a set of buildings such that the skyline can be expressed.
 
 ---
 
