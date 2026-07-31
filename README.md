@@ -43,7 +43,9 @@ The program will first read the input file and organize the provided information
 ## Algorithm Description
 -Describe the algorithm step-by-step.
 
-The algorithm we have implemented works by (Definitely Not finished)
+The algorithm we have implemented works by 
+
+(Definitely Not finished)
 
 ---
 
