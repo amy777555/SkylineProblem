@@ -66,6 +66,7 @@ SKYLINE(buildings)
 ### Merge Algorithm
 
 ```text
+
 APPEND_STRIP(result, height, x)
 
     if result is empty
@@ -120,11 +121,19 @@ MERGE_SKYLINES(left_skyline, right_skyline)
             increment i and j
 
     while strips remain in left_skyline
-        APPEND_STRIP(merged_skyline, left strip)
+        APPEND_STRIP(
+            merged_skyline,
+            left strip's height,
+            left strip's x-coordinate
+        )
         increment i
 
     while strips remain in right_skyline
-        APPEND_STRIP(merged_skyline, right strip)
+        APPEND_STRIP(
+            merged_skyline,
+            right strip's height,
+            right strip's x-coordinate
+        )
         increment j
 
     return merged_skyline
